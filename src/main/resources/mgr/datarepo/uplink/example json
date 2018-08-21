@@ -1,0 +1,30 @@
+{
+    "applicationID": "1",
+    "applicationName": "test",
+    "deviceName": "abp",
+    "devEUI": "3930a2357c378422",
+    "rxInfo": [
+        {
+            "mac": "aa555a0000000101",
+            "rssi": -36,
+            "loRaSNR": 11.5,
+            "name": "aa555a0000000101",
+            "latitude": 0,
+            "longitude": 0,
+            "altitude": 0
+        }
+    ],
+    "txInfo": {
+        "frequency": 868300000,
+        "dataRate": {
+            "modulation": "LORA",
+            "bandwidth": 125,
+            "spreadFactor": 12
+        },
+        "adr": true,
+        "codeRate": "4/5"
+    },
+    "fCnt": 0,
+    "fPort": 15,
+    "data": "RHVtbXkgU2Vuc29yIFZhbHVlIGlzIDIuMQ=="
+}
