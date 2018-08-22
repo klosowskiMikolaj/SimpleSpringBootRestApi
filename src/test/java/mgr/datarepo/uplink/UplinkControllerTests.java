@@ -19,7 +19,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@Ignore
 @RunWith(SpringRunner.class)
 @WebMvcTest(UplinkController.class)
 public class UplinkControllerTests {
@@ -32,8 +31,7 @@ public class UplinkControllerTests {
 
     private String mapToJson(Object object) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        String str = objectMapper.writeValueAsString(object);
-        return str;
+        return objectMapper.writeValueAsString(object);
     }
 
     @Test
@@ -51,7 +49,6 @@ public class UplinkControllerTests {
                 .content(mapToJson(uplink)))
 
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.id").value(1))
                 .andExpect(jsonPath("$.devEUI").value(persisted.getDevEUI()));
     }
 }

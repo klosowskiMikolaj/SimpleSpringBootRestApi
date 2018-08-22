@@ -34,13 +34,4 @@ public class Uplink {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false, nullable = false)
     private Long id;
-
-    public void setData(String data) {
-        this.data = decodeBase64(data);
-    }
-
-    private String decodeBase64(String encoded) {
-        byte[] decoded = Base64.getMimeDecoder().decode(encoded);
-        return new String(decoded);
-    }
 }
